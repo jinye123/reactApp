@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import TodoList from './containers/todoList';
 import PureRenderMixin from "react-addons-pure-render-mixin";
+
 
 class App extends Component {
     constructor() {
@@ -11,7 +11,9 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <TodoList/>
+                <div>Header</div>
+                {this.props.children}
+                <div>Footer</div>
             </div>
         );
     }

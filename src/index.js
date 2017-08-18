@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import {hashHistory} from 'react-router'
+import RouterMap from './router/routerMap';
 
 ReactDOM.render(
-    <App />,
+    <RouterMap history={hashHistory} />,
     document.getElementById('root')
 );
