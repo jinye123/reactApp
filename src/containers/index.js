@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PureRenderMixin from "react-addons-pure-render-mixin";
 
 
-class App extends Component {
+export default class App extends Component {
     constructor() {
         super();
         this.shouldComponentUpdate=PureRenderMixin.shouldComponentUpdate.bind(this);
@@ -17,6 +17,4 @@ class App extends Component {
             </div>
         );
     }
-}
-
-export default App;
+};

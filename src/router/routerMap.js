@@ -1,21 +1,25 @@
 import React, {Component} from 'react';
 import {Router, Route, IndexRoute} from 'react-router';
 
-import App from '../containers/App';
-import HomePage from '../containers/Home/homePage';
-import ListPage from '../containers/List/listPage';
-import DetailPage from '../containers/Detail/detailPage';
-import Notfount from '../containers/NotFound/notPage';
+import App from '../containers';
+import Home from '../containers/Home';
+import City from '../containers/City';
+import Detail from '../containers/Detail';
+import User from '../containers/User';
+import Search from '../containers/Search';
+import NotFount from '../containers/404';
 
 export default class RouterMap extends Component {
     render() {
         return (
             <Router history={this.props.history}>
                 <Route path="/" component={App}>
-                    <IndexRoute component={HomePage} />
-                    <Route path="list" component={ListPage}/>
-                    <Route path="detail/:id" component={DetailPage}/>
-                    <Route path="*" component={Notfount}/>
+                    <IndexRoute component={Home} />
+                    <Route path="/city" component={City}/>
+                    <Route path="/user" component={User}/>
+                    <Route path="/search" component={Search}/>
+                    <Route path="/detail" component={Detail}/>
+                    <Route path="*" component={NotFount}/>
                 </Route>
             </Router>
         )
