@@ -7,7 +7,10 @@ var router = new Router();
 
 router.get('/api', function (ctx, next) {
     console.log(ctx.params);
-    ctx.body="hello world"
+    ctx.body={
+        name:"ha",
+        age:"26"
+    }
 });
 
 router.post('/api/post', koaBody, (ctx) => {
