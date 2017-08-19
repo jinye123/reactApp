@@ -1,3 +1,6 @@
-/**
- * Created by Administrator on 2017/8/18.
- */
+import {combineReducers} from 'redux';
+import userInfo from './user';
+
+export default combineReducers({
+    userInfo: userInfo
+});

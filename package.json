@@ -21,14 +21,15 @@
     "mock": "node ./src/mock/server.js"
   },
   "proxy": {
-        "/api":{
-          "target":"http://localhost:3001/",
-          "secure":false
-        }
+    "/api": {
+      "target": "http://localhost:3001/",
+      "secure": false
+    }
   },
   "devDependencies": {
     "koa": "^2.3.0",
     "koa-body": "^2.3.0",
-    "koa-router": "^7.2.1"
+    "koa-router": "^7.2.1",
+    "react-addons-perf": "^15.4.2"
   }
 }
