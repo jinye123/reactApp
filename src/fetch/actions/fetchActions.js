@@ -30,7 +30,7 @@ export const fetchGetData = (url) => {
                 dispatch(fetchFailure(err))
             })
     }
-}
+};
 
 export const fetchPostData = (url,data) => {
     return (dispatch) => {
