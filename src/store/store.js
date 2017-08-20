@@ -1,17 +1,18 @@
 import {createStore,compose,applyMiddleware} from 'redux';
 import Perf from 'react-addons-perf';
-import rootReducer from '../reducers'
+import rootReducer from '../reducers';
+import thunkMiddleware from 'redux-thunk';
 
 let initState = {};
 
 const win = window;
 win.Perf = Perf;
 
-const middlewares=[];
+let middlewares=[thunkMiddleware];
 
 const storeEnhancers=compose(
     applyMiddleware(...middlewares),
-    window.devToolsExtension ? window.devToolsExtension() : (f)=>f
+    win.devToolsExtension ? win.devToolsExtension() : (f)=>f
 );
 
 export default createStore(rootReducer, initState,storeEnhancers)

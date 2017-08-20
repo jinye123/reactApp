@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import {connect} from 'react-redux';
+import {fetchData} from '../../actions/ad';
 
 import './style.scss';
 
@@ -8,6 +9,10 @@ class HomeHeader extends Component {
     constructor() {
         super();
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this)
+    }
+
+    componentDidMount(){
+        this.props.fetchAd();
     }
 
     render() {
@@ -37,7 +42,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-
+        fetchAd:()=>{
+            dispatch(fetchData())
+        }
     }
 };
 

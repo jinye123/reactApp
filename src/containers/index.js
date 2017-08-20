@@ -11,7 +11,6 @@ class App extends Component {
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
         this.state = {
             initDone: false,
-            showLog: 'jinye'
         }
     }
 
