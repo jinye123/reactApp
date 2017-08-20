@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import {connect} from 'react-redux';
 import {fetchGetData} from '../../fetch/actions/fetchActions';
+import {fetchStarted,fetchSuccess,fetchFailure} from '../../actions/ad'
 
 import './style.scss';
 
@@ -43,7 +44,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         fetchAd:()=>{
-            dispatch(fetchGetData('/api/homeAd'))
+            dispatch(fetchGetData('/api/homeAd',fetchStarted,fetchSuccess,fetchFailure))
         }
     }
 };

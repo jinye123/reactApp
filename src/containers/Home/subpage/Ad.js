@@ -1,7 +1,8 @@
 import React,{Component} from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import {connect} from 'react-redux';
-import * as actionTypes from '../../../fetch/actionTypes/fetchActionTypes';
+import HomeAd from '../../../components/HomeAd';
+import * as actionTypes from '../../../actionTypes/ad';
 
 class Ad extends Component {
     constructor(){
@@ -16,17 +17,17 @@ class Ad extends Component {
     render(){
         let status=this.props.status;
         switch (status){
-            case actionTypes.FETCH_STARTED:{
+            case actionTypes.FETCH_STARTED_AD:{
                 return(
                     <div>{status}</div>
                 )
             }
-            case actionTypes.FETCH_SUCCESS:{
+            case actionTypes.FETCH_SUCCESS_AD:{
                 return(
-                    <div>{status}</div>
+                    <HomeAd data={this.props.data} />
                 )
             }
-            case actionTypes.FETCH_FAILURE:{
+            case actionTypes.FETCH_FAILURE_AD:{
                 return(
                     <div>{status}</div>
                 )
@@ -42,7 +43,8 @@ class Ad extends Component {
 const mapStateToProps=(state)=>{
     const adData=state.adData;
     return{
-        status:adData.status
+        status:adData.status,
+        data:adData.data
     }
 };
 

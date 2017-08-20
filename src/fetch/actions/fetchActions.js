@@ -1,21 +1,6 @@
-import {FETCH_STARTED, FETCH_SUCCESS, FETCH_FAILURE} from '../actionTypes/fetchActionTypes';
 import {getData,postData} from '../data';
 
-export const fetchStarted = () => ({
-    type: FETCH_STARTED
-});
-
-export const fetchSuccess = (data) => ({
-    type: FETCH_SUCCESS,
-    data
-});
-
-export const fetchFailure = (err) => ({
-    type: FETCH_FAILURE,
-    err
-});
-
-export const fetchGetData = (url) => {
+export const fetchGetData = (url,fetchStarted,fetchSuccess,fetchFailure) => {
     return (dispatch) => {
 
         dispatch(fetchStarted());
@@ -32,7 +17,7 @@ export const fetchGetData = (url) => {
     }
 };
 
-export const fetchPostData = (url,data) => {
+export const fetchPostData = (url,data,fetchStarted,fetchSuccess,fetchFailure) => {
     return (dispatch) => {
 
         dispatch(fetchStarted());

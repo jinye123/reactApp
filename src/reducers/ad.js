@@ -1,15 +1,15 @@
-import * as actionTypes from '../fetch/actionTypes/fetchActionTypes';
+import * as actionTypes from '../actionTypes/ad';
 
-export default (state={status:actionTypes.FETCH_STARTED},action)=>{
+export default (state={status:actionTypes.FETCH_STARTED_AD},action)=>{
     switch (action.type){
-        case actionTypes.FETCH_STARTED:{
-            return {status:actionTypes.FETCH_STARTED}
+        case actionTypes.FETCH_STARTED_AD:{
+            return {status:actionTypes.FETCH_STARTED_AD}
         }
-        case actionTypes.FETCH_SUCCESS:{
-            return {...state,status:actionTypes.FETCH_SUCCESS,...action.data}
+        case actionTypes.FETCH_SUCCESS_AD:{
+            return {...state,status:actionTypes.FETCH_SUCCESS_AD,...action.data}
         }
-        case actionTypes.FETCH_FAILURE:{
-            return {status:actionTypes.FETCH_FAILURE}
+        case actionTypes.FETCH_FAILURE_AD:{
+            return {status:actionTypes.FETCH_FAILURE_AD}
         }
         default:{
             return state

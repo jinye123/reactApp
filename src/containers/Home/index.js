@@ -15,6 +15,7 @@ export default class Home extends Component {
             <div>
                 <HomeHeader/>
                 <CateGory/>
+                <div style={{height:"15px"}}></div>
                 <Ad/>
             </div>
         )
