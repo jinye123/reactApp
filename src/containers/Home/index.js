@@ -1,5 +1,7 @@
 import React,{Component} from 'react';
-import PureRenderMixin from 'react-addons-pure-render-mixin'
+import PureRenderMixin from 'react-addons-pure-render-mixin';
+import HomeHeader from '../../components/HomeHeader';
+import CateGory from '../../components/CateGory';
 
 export default class Home extends Component {
     constructor(){
@@ -10,7 +12,8 @@ export default class Home extends Component {
     render(){
         return (
             <div>
-                <h3>Home</h3>
+                <HomeHeader/>
+                <CateGory/>
             </div>
         )
     }
