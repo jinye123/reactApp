@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
+import {Link} from 'react-router';
 
 import './style.scss';
 
@@ -17,8 +18,10 @@ export default class HomeHeader extends Component {
         return (
             <div className="headerBox">
                 <div className="mapBox">
-                    <span>{this.props.userInfo}</span>
-                    <i className="icon-keyboard_arrow_down"></i>
+                    <Link to='/city'>
+                        <span>{this.props.userInfo}</span>
+                        <i className="icon-keyboard_arrow_down"></i>
+                    </Link>
                 </div>
                 <div className="searchBox">
                     <i className="icon-search"></i>
