@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81af00be-5fa0-46b0-84a6-418095bd8d0b" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/SearchHeader/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/SearchHeader/style.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/SearchInput/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/SearchInput/style.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mock/date/search/list.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/CateGory/index.js" afterPath="$PROJECT_DIR$/src/components/CateGory/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/HomeHeader/index.js" afterPath="$PROJECT_DIR$/src/components/HomeHeader/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/HomeHeader/style.scss" afterPath="$PROJECT_DIR$/src/components/HomeHeader/style.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Search/index.js" afterPath="$PROJECT_DIR$/src/containers/Search/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/router/routerMap.js" afterPath="$PROJECT_DIR$/src/router/routerMap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mock/server.js" afterPath="$PROJECT_DIR$/mock/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/LoadMore/index.js" afterPath="$PROJECT_DIR$/src/components/LoadMore/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/SearchHeader/index.js" afterPath="$PROJECT_DIR$/src/components/SearchHeader/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/SearchHeader/style.scss" afterPath="$PROJECT_DIR$/src/components/SearchHeader/style.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,8 +37,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/SearchHeader/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+            <state relative-caret-position="277">
+              <caret line="27" column="47" lean-forward="false" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="47" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -51,10 +47,10 @@
         </entry>
       </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/HomeHeader/index.js">
+        <entry file="file://$PROJECT_DIR$/src/components/LoadMore/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="37" column="18" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="37" selection-end-column="18" />
+            <state relative-caret-position="217">
+              <caret line="35" column="25" lean-forward="true" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -120,8 +116,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/static/css/font.css" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/CateGory/style.scss.css" />
         <option value="$PROJECT_DIR$/src/components/CateGory/style.scss" />
         <option value="$PROJECT_DIR$/src/containers/Home/subpage/superPay.js" />
@@ -154,7 +148,6 @@
         <option value="$PROJECT_DIR$/src/containers/Home/subpage/List.js" />
         <option value="$PROJECT_DIR$/src/containers/Home/subpage/Ad.js" />
         <option value="$PROJECT_DIR$/src/containers/Home/index.js" />
-        <option value="$PROJECT_DIR$/src/components/LoadMore/index.js" />
         <option value="$PROJECT_DIR$/src/components/Header/index.js" />
         <option value="$PROJECT_DIR$/src/components/Header/style.scss" />
         <option value="$PROJECT_DIR$/src/components/CurrentCity/style.scss" />
@@ -169,8 +162,11 @@
         <option value="$PROJECT_DIR$/src/components/HomeHeader/index.js" />
         <option value="$PROJECT_DIR$/src/components/SearchInput/index.js" />
         <option value="$PROJECT_DIR$/src/containers/Search/index.js" />
+        <option value="$PROJECT_DIR$/src/components/LoadMore/index.js" />
         <option value="$PROJECT_DIR$/src/components/SearchHeader/index.js" />
         <option value="$PROJECT_DIR$/src/components/SearchHeader/style.scss" />
+        <option value="$PROJECT_DIR$/mock/date/search/list.js" />
+        <option value="$PROJECT_DIR$/mock/server.js" />
       </list>
     </option>
   </component>
@@ -418,6 +414,28 @@
               <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LoadMore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reactProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reactProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -437,7 +455,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="HomeHeader" />
+              <option name="myItemId" value="Header" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reactProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reactProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mock" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -560,7 +592,7 @@
       <workItem from="1502891380474" duration="1547000" />
       <workItem from="1502896963370" duration="3177000" />
       <workItem from="1503062638320" duration="49353000" />
-      <workItem from="1503284064876" duration="26055000" />
+      <workItem from="1503284064876" duration="26865000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1502897285118</created>
@@ -667,11 +699,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503303186598</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="first">
+      <created>1503314615903</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1503314615903</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80132000" />
+    <option name="totallyTimeSpent" value="80942000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -723,14 +762,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mock/date/home/Ad.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-52">
-          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/store.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -863,14 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mock/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/List/item/style.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
@@ -959,16 +982,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#38#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/CurrentCity/style.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -1025,16 +1038,6 @@
           <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
           <folding>
             <element signature="e#0#38#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/LoadMore/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1107,16 +1110,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/Search/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/HomeHeader/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -1135,14 +1128,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/SearchHeader/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/HomeHeader/style.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1151,10 +1136,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/LoadMore/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="35" column="25" lean-forward="true" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="23" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Search/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mock/date/search/list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="60" column="1" lean-forward="false" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mock/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="45" column="3" lean-forward="true" selection-start-line="45" selection-start-column="3" selection-end-line="45" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SearchHeader/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/SearchHeader/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        <state relative-caret-position="277">
+          <caret line="27" column="47" lean-forward="false" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="47" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

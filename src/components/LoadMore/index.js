@@ -37,11 +37,11 @@ export default class LoadMore extends Component {
     };
 
     onScrollLoad = () => {
-        const top=this.loadBox.getBoundingClientRect().top;
-        const winHeight=window.screen.height;
-        if(top<winHeight){
-            this.loadMoreClick();
-        }
+        // const top=this.loadBox.getBoundingClientRect().top;
+        // const winHeight=window.screen.height;
+        // if(top<winHeight){
+        //     this.loadMoreClick();
+        // }
     };
 
     render() {

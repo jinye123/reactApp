@@ -11,17 +11,21 @@ export default class SearchHeader extends Component {
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this)
     }
 
+    clickHandle() {
+        window.history.back()
+    }
+
     onSearchHandel = (keyCode) => {
         hashHistory.push('/search/all/' + encodeURIComponent(keyCode))
     };
 
     render() {
         return (
-            <div className="headerBox">
-                <div className="mapBox">
+            <div className="searchHeaderBox">
+                <div onClick={this.clickHandle} className="mapBoxSearch">
                     <i className="icon-navigate_before"></i>
                 </div>
-                <div className="searchBox">
+                <div className="searchBoxSearch">
                     <i className="icon-search"></i>
                     <SearchInput searchHandel={this.onSearchHandel} value={this.props.keywold}/>
                 </div>
