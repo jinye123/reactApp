@@ -12,11 +12,10 @@ export default class SearchHeader extends Component {
     }
 
     clickHandle() {
-        window.history.back()
+        hashHistory.push('/')
     }
 
     onSearchHandel = (keyCode) => {
-
         hashHistory.push('/search/all/' + encodeURIComponent(keyCode))
     };
 

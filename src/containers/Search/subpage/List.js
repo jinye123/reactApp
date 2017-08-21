@@ -1,9 +1,18 @@
 import React, {Component} from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import {connect} from 'react-redux';
-import {FETCH_STARTED_SEARCH_LIST, FETCH_SUCCESS_SEARCH_LIST, FETCH_FAILURE_SEARCH_LIST} from '../../../actionTypes/searchList';
+import {
+    FETCH_STARTED_SEARCH_LIST,
+    FETCH_SUCCESS_SEARCH_LIST,
+    FETCH_FAILURE_SEARCH_LIST
+} from '../../../actionTypes/searchList';
 import {fetchGetData} from '../../../fetch/actions/fetchActions';
-import {fetchStarted, fetchSuccess, fetchFailure,initedData} from '../../../actions/searchList';
+import {
+    fetchStarted,
+    fetchSuccess,
+    fetchFailure,
+    initedData
+} from '../../../actions/searchList';
 import ListCompoent from '../../../components/List';
 import LoadMore from '../../../components/LoadMore';
 
@@ -21,29 +30,36 @@ class List extends Component {
         }
     }
 
-    componentDidMount() {
-        if(this.props.data.length>0){
-
+    componentWillReceiveProps(nextProps) {
+        if (this.props.keywold !== nextProps.keywold) {
+            this.props.initedData();
+            this.setState({
+                page: 1
+            });
+            this.getList(0, this.props.userInfo, nextProps.category, nextProps.keywold)
         }
+
+    }
+
+    componentDidMount() {
         this.props.initedData();
-        this.getList(0, this.props.userInfo,this.props.category,this.props.keywold)
+        this.getList(0, this.props.userInfo, this.props.category, this.props.keywold)
     }
 
     getMoreList = () => {
-        this.getList( this.state.page,this.props.userInfo,this.props.category,this.props.keywold);
+        this.getList(this.state.page, this.props.userInfo, this.props.category, this.props.keywold);
         this.setState({
             page: this.state.page + 1
         })
     };
 
-    getList = ( pageNum,cityName,category,keyword) => {
-        let MORE_URL = this.setUrl( pageNum,cityName,category,keyword);
+    getList = (pageNum, cityName, category, keyword) => {
+        let MORE_URL = this.setUrl(pageNum, cityName, category, keyword);
         this.props.fetchList(MORE_URL)
     };
 
-    setUrl = ( page,city,category,keyword) => {
-
-        return LIST_URL + page + '/' + encodeURIComponent(city) + '/' + category+'/'+keyword;
+    setUrl = (page, city, category, keyword) => {
+        return LIST_URL + page + '/' + encodeURIComponent(city) + '/' + category + '/' + keyword;
     };
 
     render() {
@@ -82,7 +98,7 @@ const mapDispatchToProps = (dispatch) => {
         fetchList: (url) => {
             dispatch(fetchGetData(url, fetchStarted, fetchSuccess, fetchFailure))
         },
-        initedData:()=>{
+        initedData: () => {
             dispatch(initedData())
         }
     }
