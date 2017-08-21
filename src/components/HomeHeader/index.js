@@ -1,19 +1,16 @@
 import React, {Component} from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
-import {connect} from 'react-redux';
-import {fetchGetData} from '../../fetch/actions/fetchActions';
-import {fetchStarted,fetchSuccess,fetchFailure} from '../../actions/ad'
 
 import './style.scss';
 
-class HomeHeader extends Component {
+export default class HomeHeader extends Component {
     constructor() {
         super();
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this)
     }
 
     componentDidMount(){
-        this.props.fetchAd();
+
     }
 
     render() {
@@ -34,19 +31,3 @@ class HomeHeader extends Component {
         )
     }
 }
-
-const mapStateToProps = (state) => {
-    return {
-        userInfo:state.userInfo.cityName
-    }
-};
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        fetchAd:()=>{
-            dispatch(fetchGetData('/api/homeAd',fetchStarted,fetchSuccess,fetchFailure))
-        }
-    }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(HomeHeader)

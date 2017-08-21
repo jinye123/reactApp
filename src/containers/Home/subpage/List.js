@@ -67,7 +67,6 @@ class List extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        userInfo: state.userInfo.cityName,
         listStatus: state.homeList.status,
         hasMore: state.homeList.hasMore,
         data: state.homeList.data
