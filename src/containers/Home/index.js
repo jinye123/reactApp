@@ -5,8 +5,6 @@ import CateGory from '../../components/CateGory';
 import Ad from './subpage/Ad';
 import List from './subpage/List';
 import {connect} from 'react-redux';
-import {fetchGetData} from '../../fetch/actions/fetchActions';
-import {fetchStarted,fetchSuccess,fetchFailure} from '../../actions/ad'
 
 class Home extends Component {
     constructor(){
@@ -15,7 +13,7 @@ class Home extends Component {
     }
 
     componentDidMount(){
-        this.props.fetchAd()
+
     }
 
     render(){
@@ -39,9 +37,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        fetchAd:()=>{
-            dispatch(fetchGetData('/api/homeAd',fetchStarted,fetchSuccess,fetchFailure))
-        }
+
     }
 };
 

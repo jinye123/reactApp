@@ -3,6 +3,8 @@ import PureRenderMixin from 'react-addons-pure-render-mixin';
 import {connect} from 'react-redux';
 import HomeAd from '../../../components/HomeAd';
 import * as actionTypes from '../../../actionTypes/ad';
+import {fetchGetData} from '../../../fetch/actions/fetchActions';
+import {fetchStarted,fetchSuccess,fetchFailure} from '../../../actions/ad'
 
 class Ad extends Component {
     constructor(){
@@ -11,7 +13,7 @@ class Ad extends Component {
     }
 
     componentDidMount(){
-
+        this.props.fetchAd()
     }
 
     render(){
@@ -50,7 +52,9 @@ const mapStateToProps=(state)=>{
 
 const mapDispatchToProps=(dispatch)=>{
     return {
-
+        fetchAd:()=>{
+            dispatch(fetchGetData('/api/homeAd',fetchStarted,fetchSuccess,fetchFailure))
+        }
     }
 };
 
