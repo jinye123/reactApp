@@ -1,5 +1,7 @@
 import React,{Component} from 'react';
-import PureRenderMixin from 'react-addons-pure-render-mixin'
+import PureRenderMixin from 'react-addons-pure-render-mixin';
+import SearchHeader from '../../components/SearchHeader';
+
 
 export default class Search extends Component {
     constructor(){
@@ -7,10 +9,15 @@ export default class Search extends Component {
         this.shouldComponentUpdate=PureRenderMixin.shouldComponentUpdate.bind(this)
     }
 
+    componentDidMount(){
+
+    }
+
     render(){
+        const params=this.props.params;
         return (
             <div>
-                <h3>Search</h3>
+                <SearchHeader keywold={params.keyword||''}/>
             </div>
         )
     }

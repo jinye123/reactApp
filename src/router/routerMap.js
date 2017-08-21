@@ -17,7 +17,7 @@ export default class RouterMap extends Component {
                     <IndexRoute component={Home} />
                     <Route path="/city" component={City}/>
                     <Route path="/user" component={User}/>
-                    <Route path="/search" component={Search}/>
+                    <Route path="/search/:category(/:keyword)" component={Search}/>
                     <Route path="/detail" component={Detail}/>
                     <Route path="*" component={NotFount}/>
                 </Route>

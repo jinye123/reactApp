@@ -7,15 +7,14 @@
 }
 
 .mapBox {
-  width: 60px;
+  width: 40px;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 5px;
-  a{
-    color: #ffffff;
-    text-decoration: none;
+  i{
+    font-size: 18px;
   }
 }
 
@@ -27,19 +26,11 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  padding-right: 30px;
   .icon-search{
     position: absolute;
     left: 5px;
     color: #cccccc;
     font-size: 14px;
   }
-}
-
-.userBox {
-  width: 30px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
 }

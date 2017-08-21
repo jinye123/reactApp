@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
-import {Link} from 'react-router';
+import {Link,hashHistory} from 'react-router';
+import SearchInput from '../SearchInput';
 
 import './style.scss';
 
@@ -14,6 +15,10 @@ export default class HomeHeader extends Component {
 
     }
 
+    onSearchHandel=(keyCode)=>{
+        hashHistory.push('/search/all/'+encodeURIComponent(keyCode))
+    };
+
     render() {
         return (
             <div className="headerBox">
@@ -25,7 +30,7 @@ export default class HomeHeader extends Component {
                 </div>
                 <div className="searchBox">
                     <i className="icon-search"></i>
-                    <input className="searchInput" type="text" placeholder="请输入关键字"/>
+                    <SearchInput value="" searchHandel={this.onSearchHandel}/>
                 </div>
                 <div className="userBox">
                     <i className="icon-user"></i>

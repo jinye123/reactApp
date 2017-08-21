@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import ReactSwipe from 'react-swipe';
+import {Link} from 'react-router';
 
 import './style.scss';
 
@@ -31,30 +32,30 @@ export default class CateGory extends Component {
                 <ReactSwipe className="carousel" swipeOptions={options}>
                     <div className="carousel-item">
                         <ul className="clear-fix">
-                            <li className="float-left jingdian">景点</li>
-                            <li className="float-left ktv">KTV</li>
-                            <li className="float-left gouwu">购物</li>
-                            <li className="float-left shenghuofuwu">生活服务</li>
-                            <li className="float-left jianshenyundong">健身运动</li>
-                            <li className="float-left meifa">美发</li>
-                            <li className="float-left qinzi">亲子</li>
-                            <li className="float-left xiaochikuaican">小吃快餐</li>
-                            <li className="float-left zizhucan">自助餐</li>
-                            <li className="float-left jiuba">酒吧</li>
+                            <Link to="/search/jingdian"><li className="float-left jingdian">景点</li></Link>
+                            <Link to="/search/ktv"><li className="float-left ktv">KTV</li></Link>
+                            <Link to="/search/gouwu"><li className="float-left gouwu">购物</li></Link>
+                            <Link to="/search/shenghuofuwu"><li className="float-left shenghuofuwu">生活服务</li></Link>
+                            <Link to="/search/jianshenyundong"><li className="float-left jianshenyundong">健身运动</li></Link>
+                            <Link to="/search/meifa"><li className="float-left meifa">美发</li></Link>
+                            <Link to="/search/qinzi"><li className="float-left qinzi">亲子</li></Link>
+                            <Link to="/search/xiaochikuaican"><li className="float-left xiaochikuaican">小吃快餐</li></Link>
+                            <Link to="/search/zizhucan"><li className="float-left zizhucan">自助餐</li></Link>
+                            <Link to="/search/jiuba"><li className="float-left jiuba">酒吧</li></Link>
                         </ul>
                     </div>
                     <div className="carousel-item">
                         <ul className="clear-fix">
-                            <li className="float-left meishi">美食</li>
-                            <li className="float-left dianying">电影</li>
-                            <li className="float-left jiudian">酒店</li>
-                            <li className="float-left xuixianyule">休闲娱乐</li>
-                            <li className="float-left waimai">外卖</li>
-                            <li className="float-left huoguo">火锅</li>
-                            <li className="float-left liren">丽人</li>
-                            <li className="float-left dujiachuxing">度假出行</li>
-                            <li className="float-left zuliaoanmo">足疗按摩</li>
-                            <li className="float-left zhoubianyou">周边游</li>
+                            <Link to="/search/meishi"><li className="float-left meishi">美食</li></Link>
+                            <Link to="/search/dianying"><li className="float-left dianying">电影</li></Link>
+                            <Link to="/search/jiudian"><li className="float-left jiudian">酒店</li></Link>
+                            <Link to="/search/xuixianyule"><li className="float-left xuixianyule">休闲娱乐</li></Link>
+                            <Link to="/search/waimai"><li className="float-left waimai">外卖</li></Link>
+                            <Link to="/search/huoguo"><li className="float-left huoguo">火锅</li></Link>
+                            <Link to="/search/liren"><li className="float-left liren">丽人</li></Link>
+                            <Link to="/search/dujiachuxing"><li className="float-left dujiachuxing">度假出行</li></Link>
+                            <Link to="/search/zuliaoanmo"><li className="float-left zuliaoanmo">足疗按摩</li></Link>
+                            <Link to="/search/zhoubianyou"><li className="float-left zhoubianyou">周边游</li></Link>
                         </ul>
                     </div>
                     <div className="carousel-item">
