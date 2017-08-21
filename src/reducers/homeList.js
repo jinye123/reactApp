@@ -17,6 +17,9 @@ export default (state={status:actionTypes.FETCH_STARTED_HOME_LIST,hasMore:false,
         case actionTypes.FETCH_FAILURE_HOME_LIST:{
             return {...state,status:actionTypes.FETCH_FAILURE_HOME_LIST}
         }
+        case actionTypes.FETCH_INITED_HOME_LIST:{
+            return {status:actionTypes.FETCH_STARTED_HOME_LIST,hasMore:false,data:[]}
+        }
         default:{
             return state
         }

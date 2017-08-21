@@ -16,6 +16,7 @@ export default class SearchHeader extends Component {
     }
 
     onSearchHandel = (keyCode) => {
+
         hashHistory.push('/search/all/' + encodeURIComponent(keyCode))
     };
 

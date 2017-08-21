@@ -7,11 +7,9 @@ export const fetchGetData = (url,fetchStarted,fetchSuccess,fetchFailure) => {
 
         getData(url)
             .then(data => {
-                console.log(data);
                 dispatch(fetchSuccess(data))
             })
             .catch(err => {
-                console.log(err);
                 dispatch(fetchFailure(err))
             })
     }
@@ -24,11 +22,9 @@ export const fetchPostData = (url,data,fetchStarted,fetchSuccess,fetchFailure) =
 
         postData(url,data)
             .then(data => {
-                console.log(data);
                 dispatch(fetchSuccess(data))
             })
             .catch(err => {
-                console.log(err);
                 dispatch(fetchFailure(err))
             })
     }
