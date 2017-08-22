@@ -58,7 +58,31 @@ router.get('/api/search/:page/:city/:category', function (ctx, next) {
     console.log('当前类别：' + paramsCategory);
 
     ctx.body = searchListData
-})
+});
+
+//商品详情页面
+var infoData=require('./date/detail/info');
+router.get('/api/detail/:id', function (ctx, next) {
+    const params = ctx.params;
+    const id = params.id;
+
+    console.log(id);
+    ctx.body=infoData
+});
+
+const detailComment = require('./date/detail/comment.js');
+router.get('/api/detail/comment/:page/:id', function (ctx, next) {
+    console.log('详情页 - 用户点评');
+
+    const params = ctx.params;
+    const page = params.page;
+    const id = params.id;
+
+    console.log('商户id: ' + id);
+    console.log('当前页数: ' + page);
+
+    ctx.body = detailComment
+});
 
 router.post('/api/post', koaBody, (ctx) => {
         console.log(ctx.request.body);
