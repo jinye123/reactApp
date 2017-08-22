@@ -3,10 +3,14 @@ import userInfo from './user';
 import adData from './ad';
 import homeList from './homeList';
 import searchList from './searchList';
+import {infoReducer} from '../containers/Detail/subpage/Info/index';
+import {commentReducer} from '../containers/Detail/subpage/comment/index';
 
 export default combineReducers({
     userInfo: userInfo,
     adData:adData,
     homeList:homeList,
-    searchList:searchList
+    searchList:searchList,
+    infoReducer:infoReducer,
+    commentReducer:commentReducer
 });

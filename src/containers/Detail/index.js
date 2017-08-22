@@ -1,16 +1,22 @@
-import React,{Component} from 'react';
-import PureRenderMixin from 'react-addons-pure-render-mixin'
+import React, {Component} from 'react';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
+import Header from '../../components/Header';
+import {Info} from './subpage/Info/index';
+import {Comment} from './subpage/comment/index';
 
 export default class Detail extends Component {
-    constructor(){
+    constructor() {
         super();
-        this.shouldComponentUpdate=PureRenderMixin.shouldComponentUpdate.bind(this)
+        this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this)
     }
 
-    render(){
+    render() {
+        const params = this.props.params;
         return (
             <div>
-                <h3>Detail</h3>
+                <Header title="商品详情"/>
+                <Info id={params.id}/>
+                <Comment id={params.id}/>
             </div>
         )
     }
