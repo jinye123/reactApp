@@ -15,7 +15,7 @@ export default (state = {status: FETCH_STARTED_DETAIL_COMMENT, hasMore: false, d
             return newState
         }
         case FETCH_FAILURI_DETAIL_COMMENT: {
-            return {status: FETCH_FAILURI_DETAIL_COMMENT}
+            return {...state, status: FETCH_FAILURI_DETAIL_COMMENT}
         }
         default: {
             return state
