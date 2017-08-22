@@ -5,6 +5,7 @@ import {FETCH_STARTED_DETAIL_COMMENT, FETCH_SECCESS_DETAIL_COMMENT} from '../act
 import {fetchStarted, fetchSuccess, fetchFailure} from '../actions';
 import {fetchGetData} from '../../../../../fetch/actions/fetchActions';
 import CommentList from './ComeentList';
+import LoadMore from '../../../../../components/LoadMore';
 
 const FETCH_URL = '/api/detail/comment/';
 
@@ -36,14 +37,22 @@ class Info extends Component {
     };
 
     render() {
+        const status = this.props.status;
         return (
             <div>
                 {
-                    this.props.status === FETCH_STARTED_DETAIL_COMMENT
+                    status === FETCH_STARTED_DETAIL_COMMENT && !this.props.data
                         ? <div>加载。。</div>
-                        : this.props.status === FETCH_SECCESS_DETAIL_COMMENT
+                        : status === FETCH_STARTED_DETAIL_COMMENT && this.props.data
                         ? <CommentList data={this.props.data}/>
-                        : <div>加载失败</div>
+                        : status === FETCH_SECCESS_DETAIL_COMMENT
+                            ? <CommentList data={this.props.data}/>
+                            : <div>加载失败</div>
+                }
+                {
+                    this.props.hasMore
+                        ? <LoadMore listStatus={status} loadMoreFn={this.getMoreList}/>
+                        : ''
                 }
             </div>
         )
@@ -54,7 +63,7 @@ const mapStateToProps = (state) => {
     return {
         status: state.commentReducer.status,
         data: state.commentReducer.data,
-        hasMore:state.commentReducer.hasMore
+        hasMore: state.commentReducer.hasMore
     }
 };
 

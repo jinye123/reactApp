@@ -1,7 +1,12 @@
 import React, {Component} from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import {FETCH_STARTED_HOME_LIST, FETCH_SUCCESS_HOME_LIST} from '../../actionTypes/HomeList';
-import {FETCH_STARTED_SEARCH_LIST,FETCH_SUCCESS_SEARCH_LIST} from '../../actionTypes/searchList'
+import {FETCH_STARTED_SEARCH_LIST, FETCH_SUCCESS_SEARCH_LIST} from '../../actionTypes/searchList';
+import {
+    FETCH_STARTED_DETAIL_COMMENT,
+    FETCH_SECCESS_DETAIL_COMMENT,
+    FETCH_FAILURI_DETAIL_COMMENT
+} from '../../containers/Detail/subpage/comment/actionTypes';
 
 import './style.scss';
 
@@ -33,8 +38,8 @@ export default class LoadMore extends Component {
         }.bind(this), false)
     }
 
-    getRef=(node)=>{
-        this.loadBox=node
+    getRef = (node) => {
+        this.loadBox = node
     };
 
     onScrollLoad = () => {
@@ -46,12 +51,13 @@ export default class LoadMore extends Component {
     };
 
     render() {
+        const status = this.props.listStatus;
         return (
             <div>
                 {
-                    this.props.listStatus === FETCH_STARTED_HOME_LIST||this.props.listStatus===FETCH_STARTED_SEARCH_LIST
+                    status === FETCH_STARTED_HOME_LIST || status === FETCH_STARTED_SEARCH_LIST || status === FETCH_STARTED_DETAIL_COMMENT
                         ? <div className="loadMoreIng">加载中···</div>
-                        : this.props.listStatus === FETCH_SUCCESS_HOME_LIST||this.props.listStatus===FETCH_SUCCESS_SEARCH_LIST
+                        : status === FETCH_SUCCESS_HOME_LIST || status === FETCH_SUCCESS_SEARCH_LIST || status === FETCH_SECCESS_DETAIL_COMMENT
                         ? <div onClick={this.loadMoreClick} ref={this.getRef} className="loadMoreBtn">加载更多</div>
                         : <div onClick={this.loadMoreClick} className="loadMoreFailed">加载失败</div>
                 }
