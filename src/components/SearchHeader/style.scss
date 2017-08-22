@@ -1,0 +1,36 @@
+.searchHeaderBox {
+  display: flex;
+  align-items: center;
+  height: 45px;
+  background-color: rgb(233, 32, 61);
+  color: #fff;
+}
+
+.mapBoxSearch {
+  width: 40px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px;
+  i{
+    font-size: 18px;
+  }
+}
+
+.searchBoxSearch {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-right: 30px;
+  .icon-search{
+    position: absolute;
+    left: 5px;
+    color: #cccccc;
+    font-size: 14px;
+  }
+}
