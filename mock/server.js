@@ -1,20 +1,20 @@
 var Koa = require('koa');
 var Router = require('koa-router');
 var koaBody = require('koa-body')();
-var fs=require('fs');
+var fs = require('fs');
 
 var app = new Koa();
 var router = new Router();
 
 
 // 首页（超值特惠）
-const homeAdData=require('./date/home/Ad.js');
+const homeAdData = require('./date/home/Ad.js');
 router.get('/api/homeAd', function (ctx, next) {
-    ctx.body=homeAdData;
+    ctx.body = homeAdData;
 });
 
 // 首页（猜你喜欢）
-const homeListData=require('./date/home/List');
+const homeListData = require('./date/home/List');
 router.get('/api/homelist/:city/:page', function (ctx, next) {
     // 参数
     const params = ctx.params;
@@ -62,13 +62,13 @@ router.get('/api/search/:page/:city/:category', function (ctx, next) {
 });
 
 //商品详情页面
-var infoData=require('./date/detail/info');
+var infoData = require('./date/detail/info');
 router.get('/api/detail/:id', function (ctx, next) {
     const params = ctx.params;
     const id = params.id;
 
     console.log(id);
-    ctx.body=infoData
+    ctx.body = infoData
 });
 
 const detailComment = require('./date/detail/comment.js');
@@ -88,14 +88,14 @@ router.get('/api/detail/comment/:page/:id', function (ctx, next) {
 router.post('/api/post/detail/:id', koaBody, (ctx) => {
         console.log(ctx.request.body.isStore);
         console.log(infoData)
-        infoData.isStore=ctx.request.body.isStore;
+        infoData.isStore = ctx.request.body.isStore;
         console.log(infoData)
         ctx.body = infoData;
     }
 );
 
 // 订单列表
-const orderList = require('./date/order/orderList.js');
+var orderList = require('./date/order/orderList.js');
 router.get('/api/orderlist/:username', (ctx) => {
     console.log('订单列表');
 
@@ -105,6 +105,28 @@ router.get('/api/orderlist/:username', (ctx) => {
 
     ctx.body = orderList
 });
+
+// 提交评论
+router.post('/api/submitComment', koaBody, (ctx) => {
+    console.log('提交评论');
+
+    // 获取参数
+    console.log(ctx.request.body);
+    orderList.data = orderList.data.map((item, index) => {
+        if (ctx.request.body.id === item.id) {
+            item.commentState = 2;
+            item.value = ctx.request.body.value;
+            return item
+        } else {
+            return item
+        }
+    });
+    ctx.body = {
+        status: 0,
+        msg: 'ok'
+    }
+});
+
 
 app.use(router.routes())
     .use(router.allowedMethods());

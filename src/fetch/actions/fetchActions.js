@@ -29,3 +29,16 @@ export const fetchPostData = (url,data,fetchStarted,fetchSuccess,fetchFailure) =
             })
     }
 };
+
+export const commentPostData = (url,data,fetchSuccess,id,value) => {
+    return (dispatch) => {
+
+        postData(url,data)
+            .then(data => {
+                dispatch(fetchSuccess(id,value))
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+};
