@@ -14,7 +14,7 @@ export default class Login extends Component {
         return (
             <div>
                 <Header title="登录"/>
-                <LoginCtn/>
+                <LoginCtn router={params.router}/>
             </div>
         )
     }

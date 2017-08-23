@@ -20,7 +20,7 @@ export default class RouterMap extends Component {
                     <Route path="/user" component={User}/>
                     <Route path="/search/:category(/:keyword)" component={Search}/>
                     <Route path="/detail/:id" component={Detail}/>
-                    <Route path='/Login(/router)' component={Login} />
+                    <Route path='/Login(/:router)' component={Login} />
                     <Route path="*" component={NotFount}/>
                 </Route>
             </Router>

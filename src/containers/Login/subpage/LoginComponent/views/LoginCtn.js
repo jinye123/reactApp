@@ -31,7 +31,11 @@ class LoginCtn extends Component {
     }
 
     gotoUser = () => {
-        hashHistory.push('/user')
+        if(this.props.router){
+            hashHistory.push(this.props.router);
+        }else {
+            hashHistory.push('/user');
+        }
     };
 
     render() {

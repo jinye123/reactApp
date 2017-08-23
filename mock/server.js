@@ -1,6 +1,7 @@
 var Koa = require('koa');
 var Router = require('koa-router');
 var koaBody = require('koa-body')();
+var fs=require('fs');
 
 var app = new Koa();
 var router = new Router();
@@ -84,9 +85,12 @@ router.get('/api/detail/comment/:page/:id', function (ctx, next) {
     ctx.body = detailComment
 });
 
-router.post('/api/post', koaBody, (ctx) => {
-        console.log(ctx.request.body);
-        ctx.body = JSON.stringify(ctx.request.body);
+router.post('/api/post/detail/:id', koaBody, (ctx) => {
+        console.log(ctx.request.body.isStore);
+        console.log(infoData)
+        infoData.isStore=ctx.request.body.isStore;
+        console.log(infoData)
+        ctx.body = infoData;
     }
 );
 
