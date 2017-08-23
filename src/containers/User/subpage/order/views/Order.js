@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import {connect} from 'react-redux';
+import {hashHistory} from 'react-router';
 import {FETCH_STARTED_ORDER_LIST, FETCH_SECCESS_ORDER_LIST} from '../actionTypes';
 import {fetchStarted, fetchSuccess, fetchFailure} from '../actions';
 import {fetchGetData} from '../../../../../fetch/actions/fetchActions';
@@ -17,11 +18,16 @@ class Order extends Component {
     }
 
     componentDidMount() {
-        this.props.getOrderListData(this.getUrl());
+        if(this.props.userId){
+            this.props.getOrderListData(this.getUrl());
+        }else {
+            hashHistory.push('/Login')
+        }
+
     }
 
     componentWillReceiveProps(){
-        console.log(this.props.data);
+
     }
 
     getUrl = () => {

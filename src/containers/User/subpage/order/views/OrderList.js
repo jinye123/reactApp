@@ -4,7 +4,6 @@ import './orderList.scss';
 
 export default (props)=>{
     const data=props.data;
-    console.log(data)
     return(
         <div className="order-list-container">
             <h2>您的订单</h2>

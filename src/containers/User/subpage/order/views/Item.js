@@ -19,7 +19,7 @@ class Item extends React.Component {
                         <img src={data.img}/>
                     </div>
                     <div className="order-item-comment float-right">
-                        <button className="btn" onClick={this.showComment.bind(this)}>评价</button>
+                        <button className="btn" >评价</button>
                     </div>
                     <div className="order-item-content">
                         <span>商户：{data.title}</span>
