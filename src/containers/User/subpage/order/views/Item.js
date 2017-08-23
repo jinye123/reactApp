@@ -13,11 +13,14 @@ export default class Item extends React.Component {
     }
 
     showComment = (id) => {
-        this.props.commentAdd(id)
+        this.props.commentAdd(id);
     };
 
     hideComment = (id) => {
-        this.props.commentCancel(id)
+        this.props.commentCancel(id);
+        this.setState({
+            value: ''
+        })
     };
 
     submitComment = (id) => {
