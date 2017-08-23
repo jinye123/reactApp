@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import {connect} from 'react-redux';
 import {FETCH_STARTED_DETAIL_COMMENT, FETCH_SECCESS_DETAIL_COMMENT} from '../actionTypes';
-import {fetchStarted, fetchSuccess, fetchFailure} from '../actions';
+import {fetchStarted, fetchSuccess, fetchFailure, fetchInited} from '../actions';
 import {fetchGetData} from '../../../../../fetch/actions/fetchActions';
 import CommentList from './ComeentList';
 import LoadMore from '../../../../../components/LoadMore';
@@ -20,6 +20,7 @@ class Info extends Component {
     }
 
     componentDidMount() {
+        this.props.getInitedData();
         this.props.getInfoData(this.getUrl(0, this.props.id));
 
     }
@@ -71,6 +72,9 @@ const mapDispatchToProps = (dispatch) => {
     return {
         getInfoData: (url) => {
             dispatch(fetchGetData(url, fetchStarted, fetchSuccess, fetchFailure))
+        },
+        getInitedData: () => {
+            dispatch(fetchInited())
         }
     }
 };

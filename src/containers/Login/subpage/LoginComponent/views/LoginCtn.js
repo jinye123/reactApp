@@ -13,7 +13,9 @@ class LoginCtn extends Component {
     }
 
     componentDidMount() {
-
+        if(this.props.userId){
+            this.gotoUser();
+        }
     }
 
     updataUserInfo = (userId) => {
@@ -22,8 +24,18 @@ class LoginCtn extends Component {
         })
     };
 
+    componentWillReceiveProps(nextProps){
+        if(nextProps.userId){
+            this.gotoUser();
+        }
+    }
+
     gotoUser = () => {
-        hashHistory.push('/user')
+        if(this.props.router){
+            hashHistory.push(this.props.router);
+        }else {
+            hashHistory.push('/user');
+        }
     };
 
     render() {
@@ -31,7 +43,7 @@ class LoginCtn extends Component {
             <div>
                 {
                     this.props.userId
-                        ? this.gotoUser()
+                        ? <div>加载中。。。</div>
                         : <Login loginHandle={this.updataUserInfo}/>
                 }
             </div>
