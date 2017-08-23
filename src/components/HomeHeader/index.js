@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
-import {Link,hashHistory} from 'react-router';
+import {Link, hashHistory} from 'react-router';
 import SearchInput from '../SearchInput';
 
 import './style.scss';
@@ -11,12 +11,12 @@ export default class HomeHeader extends Component {
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this)
     }
 
-    componentDidMount(){
+    componentDidMount() {
 
     }
 
-    onSearchHandel=(keyCode)=>{
-        hashHistory.push('/search/all/'+encodeURIComponent(keyCode))
+    onSearchHandel = (keyCode) => {
+        hashHistory.push('/search/all/' + encodeURIComponent(keyCode))
     };
 
     render() {
@@ -33,7 +33,9 @@ export default class HomeHeader extends Component {
                     <SearchInput value="" searchHandel={this.onSearchHandel}/>
                 </div>
                 <div className="userBox">
-                    <i className="icon-user"></i>
+                    <Link to='/login'>
+                        <i className="icon-user"></i>
+                    </Link>
                 </div>
             </div>
         )

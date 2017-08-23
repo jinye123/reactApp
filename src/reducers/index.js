@@ -5,6 +5,7 @@ import homeList from './homeList';
 import searchList from './searchList';
 import {infoReducer} from '../containers/Detail/subpage/Info/index';
 import {commentReducer} from '../containers/Detail/subpage/comment/index';
+import {LoginReducer} from '../containers/Login/subpage/LoginComponent/index';
 
 export default combineReducers({
     userInfo: userInfo,
@@ -12,5 +13,6 @@ export default combineReducers({
     homeList:homeList,
     searchList:searchList,
     infoReducer:infoReducer,
-    commentReducer:commentReducer
+    commentReducer:commentReducer,
+    LoginReducer:LoginReducer
 });

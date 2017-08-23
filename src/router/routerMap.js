@@ -7,6 +7,7 @@ import City from '../containers/City';
 import Detail from '../containers/Detail';
 import User from '../containers/User';
 import Search from '../containers/Search';
+import Login from '../containers/Login/index';
 import NotFount from '../containers/404';
 
 export default class RouterMap extends Component {
@@ -19,6 +20,7 @@ export default class RouterMap extends Component {
                     <Route path="/user" component={User}/>
                     <Route path="/search/:category(/:keyword)" component={Search}/>
                     <Route path="/detail/:id" component={Detail}/>
+                    <Route path='/Login(/router)' component={Login} />
                     <Route path="*" component={NotFount}/>
                 </Route>
             </Router>
