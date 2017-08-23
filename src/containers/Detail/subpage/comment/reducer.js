@@ -1,6 +1,17 @@
-import {FETCH_STARTED_DETAIL_COMMENT, FETCH_SECCESS_DETAIL_COMMENT, FETCH_FAILURI_DETAIL_COMMENT} from './actionTypes';
+import {
+    FETCH_STARTED_DETAIL_COMMENT,
+    FETCH_SECCESS_DETAIL_COMMENT,
+    FETCH_FAILURI_DETAIL_COMMENT,
+    FETCH_INITED_DETAIL_COMMENT
+} from './actionTypes';
 
-export default (state = {status: FETCH_STARTED_DETAIL_COMMENT, hasMore: false, data: []}, action) => {
+const initData={
+    status: FETCH_STARTED_DETAIL_COMMENT,
+    hasMore: false,
+    data: []
+};
+
+export default (state = initData, action) => {
     switch (action.type) {
         case FETCH_STARTED_DETAIL_COMMENT: {
             return {...state, status: FETCH_STARTED_DETAIL_COMMENT}
@@ -16,6 +27,9 @@ export default (state = {status: FETCH_STARTED_DETAIL_COMMENT, hasMore: false, d
         }
         case FETCH_FAILURI_DETAIL_COMMENT: {
             return {...state, status: FETCH_FAILURI_DETAIL_COMMENT}
+        }
+        case FETCH_INITED_DETAIL_COMMENT:{
+            return initData
         }
         default: {
             return state
