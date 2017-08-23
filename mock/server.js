@@ -94,6 +94,18 @@ router.post('/api/post/detail/:id', koaBody, (ctx) => {
     }
 );
 
+// 订单列表
+const orderList = require('./date/order/orderList.js');
+router.get('/api/orderlist/:username', (ctx) => {
+    console.log('订单列表');
+
+    const params = ctx.params;
+    const username = params.username;
+    console.log('用户名：' + username);
+
+    ctx.body = orderList
+});
+
 app.use(router.routes())
     .use(router.allowedMethods());
 

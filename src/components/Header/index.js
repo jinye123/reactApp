@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
+import {hashHistory} from 'react-router';
 
 import './style.scss'
 
@@ -20,6 +21,12 @@ export default class Header extends Component {
         )
     }
     clickHandle() {
-        window.history.back()
+        console.log(this.props.hasRouter)
+        if(this.props.hasRouter){
+            hashHistory.push(this.props.hasRouter);
+        }else {
+            window.history.back()
+        }
+
     }
 }

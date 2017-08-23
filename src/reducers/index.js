@@ -6,6 +6,7 @@ import searchList from './searchList';
 import {infoReducer} from '../containers/Detail/subpage/Info/index';
 import {commentReducer} from '../containers/Detail/subpage/comment/index';
 import {LoginReducer} from '../containers/Login/subpage/LoginComponent/index';
+import {orderReducer} from '../containers/User/subpage/order/index';
 
 export default combineReducers({
     userInfo: userInfo,
@@ -14,5 +15,6 @@ export default combineReducers({
     searchList:searchList,
     infoReducer:infoReducer,
     commentReducer:commentReducer,
-    LoginReducer:LoginReducer
+    LoginReducer:LoginReducer,
+    orderReducer:orderReducer
 });
